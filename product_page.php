@@ -22,8 +22,18 @@ error_reporting(E_ALL);
 <?php } ?>
 
 <br/>
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+<?php
+	include 'login_modal.php';
+?>
+
+
+
+<!--End of  Log in Modal-->
+
+
+<!-- Review in Modal -->
+<div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -41,10 +51,21 @@ error_reporting(E_ALL);
     </div>
   </div>
 </div>
+<!--End of  Review Modal-->
 
+
+
+
+
+<div class= "container">
 
 <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#">Review</a></li>
+
+	<ul class="nav navbar-nav navbar-right">
+        <li><button type="button" class="btn btn-primary">Write Review</button></li>
+    </ul>
+
+	<li role="presentation" class="active" aria-hidden="true"data-toggle="modal" data-target="#reviewModal"><a href="#">Review</a></li>
 </ul>
 
 <table>
@@ -55,8 +76,8 @@ error_reporting(E_ALL);
   			echo '</tr>';
   		}
     ?>
-
 </table>
 
+</div>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>

@@ -32,7 +32,7 @@ error_reporting(E_ALL);
 
 <br/>
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -49,7 +49,10 @@ error_reporting(E_ALL);
       
     </div>
   </div>
-</div>
+</div> -->
+<?php 
+	include 'login_modal.php';
+?>
 <!--End of Modal-->
 <div class="list-group">
 	<?php
