@@ -65,13 +65,16 @@ class Review{
 	}
 
 	public function listReview(){
-		$reviews = "SELECT c.email , r.rating,r.revie_title,r.review
+		$reviews = "SELECT c.email,
+							r.rating,
+							r.review_title,
+							r.review
 					FROM customers AS c
 					JOIN reviews AS r 
-					ON n c.customer_id = r.customer_id;";
+					ON c.customer_id = r.customer_id";
 
 		$query = $this->conn->query($reviews);
-		$result = $query->fetch(PDO::FETCH_ASSOC);
+		$result = $query->fetchAll(PDO::FETCH_ASSOC);
 
 		return $result;
 	}
