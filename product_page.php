@@ -7,7 +7,7 @@
 
 <?php
 	$reviews = new Review();
-	$reviews_list = $reviews->listReview($rating,$titleReview,$titleBody);
+	$reviews_list = $reviews->listReview();
 ?>	
 
 <?php
@@ -19,12 +19,11 @@
 	</ul>
 
 		<table>
-			<tr style="background-color: yellow;border:solid 2px;"><td>hkfghskg</td></tr>
 			<?php
 	      		foreach($reviews_list as $row){
-	      			echo '<tr style="background-color:#669999; solid 2px;">';
-	      			echo $row['rating'].'<br >'.$row['review_title'].'<br >' .$row['review'];
-	      			echo '</li>';
+	      			echo '<tr style="background-color:#669999;border:solid 2px;">';
+	      			echo '<td>'.$row['email'].'<br >'.$row['rating'].'<br >'.$row['review_title'].'<br >' .$row['review'].'</td>';
+	      			echo '</tr>';
 	      		}
 		    ?>
 

@@ -64,11 +64,14 @@ class Review{
 	public function updateReview(){
 	}
 
-	public function listReview($rating,$titleReview,$titleBody){
-		$reviews = "SELECT rating,review_title,review
-					FROM reviews";
+	public function listReview(){
+		$reviews = "SELECT c.email , r.rating,r.revie_title,r.review
+					FROM customers AS c
+					JOIN reviews AS r 
+					ON n c.customer_id = r.customer_id;";
+
 		$query = $this->conn->query($reviews);
-		$result = $query->fetchAll(PDO::FETCH_ASSOC);
+		$result = $query->fetch(PDO::FETCH_ASSOC);
 
 		return $result;
 	}
