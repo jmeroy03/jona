@@ -16,7 +16,10 @@ class Review{
 	}
 
 	public function addReview($rating,$titleReview,$titleBody){
-		$sql = "INSERT INTO movies(filmName,
+	/*	$insert = $db->prepare();*/
+
+
+/*		$sql = "INSERT INTO movies(filmName,
             filmDescription,
             filmImage,
             filmPrice,
@@ -37,7 +40,7 @@ class Review{
 			$stmt->bindParam(':filmReview', $_POST['filmReview'], PDO::PARAM_STR);   
                                       
 			$stmt->execute(); 
-
+*/
 
 
 
