@@ -16,7 +16,7 @@ class Review{
 	}
 
 	public function addReview($rating,$titleReview,$titleBody){
-	/*	$insert = $db->prepare();*/
+	$insert = $db->prepare();
 
 
 /*		$sql = "INSERT INTO movies(filmName,

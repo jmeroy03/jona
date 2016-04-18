@@ -33,24 +33,10 @@ error_reporting(E_ALL);
 
 
 <!-- Review in Modal -->
-<div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Log in</h4>
-      </div>
-      <div class="modal-body">
-       <form action="<?php $customers->login();?>" class="form-group" method="POST">
-			<input class='form-control'type="text" name="email" placeholder="email">
-			<input class='form-control'type="password" name="password" placeholder="password">
-			<input class='form-control btn btn-success' type="submit" value="Log-in" name="logIn">
-	   </form>
-      </div>
-      
-    </div>
-  </div>
-</div>
+<?php
+  include 'review_modal.php';
+?>
+
 <!--End of  Review Modal-->
 
 
@@ -62,10 +48,10 @@ error_reporting(E_ALL);
 <ul class="nav nav-tabs">
 
 	<ul class="nav navbar-nav navbar-right">
-        <li><button type="button" class="btn btn-primary">Write Review</button></li>
+        <li><button type="button" class="btn btn-primary" aria-hidden="true"data-toggle="modal" data-target="#reviewModal">Write Review</button></li>
     </ul>
 
-	<li role="presentation" class="active" aria-hidden="true"data-toggle="modal" data-target="#reviewModal"><a href="#">Review</a></li>
+	<li role="presentation" class="active" ><a href="#">Review</a></li>
 </ul>
 
 <table>
