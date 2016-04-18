@@ -7,19 +7,19 @@ error_reporting(E_ALL);
 	require 'classes/logins.php';
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
-<body>
+<body> -->
 <?php
     session_start();
-	$products = new Product();
-	$customers = new Customers();
-	$products_list = $products->getProducts();
+	//$products = new Product();
+	//$customers = new Customers();
+	//$products_list = $products->getProducts();
 ?>
 
 <?php
