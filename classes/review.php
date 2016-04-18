@@ -1,14 +1,14 @@
 <?php
- require '../jona/DbConnect/pdo.php';
+ require_once "../jona/DbConnect/pdo.php";
 
 
 class Review{
 	protected $conn;
 	private $productId;
 	private $customerId;
-	private $rating;
-	private $titleReview;
-	private $titleBody;
+	public $rating;
+	public $titleReview;
+	public $titleBody;
 
 	public function __construct(){
 		$db = new Database();
@@ -62,11 +62,15 @@ class Review{
 	}
 
 	public function updateReview(){
+	}
 
+	public function listReview($rating,$titleReview,$titleBody){
+		$reviews = "SELECT rating,review_title,review
+					FROM reviews";
+		$query = $this->conn->query($reviews);
+		$result = $query->fetchAll(PDO::FETCH_ASSOC);
 
-
-
-
+		return $result;
 	}
 
 }
