@@ -1,4 +1,12 @@
 <?php
+	require 'controllers/customers.php';
+	require 'classes/product.php';
+	require 'classes/logins.php';
+?>
+
+
+
+<?php
 	include 'header.php';
 ?>
 

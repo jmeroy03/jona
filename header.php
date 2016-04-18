@@ -7,7 +7,6 @@
 </head>
 <body>
 <?php
-   
   $products = new Product();
   $customers = new Customers();
   $products_list = $products->getProducts();
