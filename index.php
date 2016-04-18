@@ -17,9 +17,9 @@ error_reporting(E_ALL);
 <body> -->
 <?php
     session_start();
-	//$products = new Product();
-	//$customers = new Customers();
-	//$products_list = $products->getProducts();
+	$products = new Product();
+	$customers = new Customers();
+	$products_list = $products->getProducts();
 ?>
 
 <?php
@@ -50,11 +50,14 @@ error_reporting(E_ALL);
     </div>
   </div>
 </div>
-
-<?php
-	
-
-?>
+<!--End of Modal-->
+<div class="list-group">
+	<?php
+		foreach ($products_list as $row) {
+		echo '<a href="product_page.php?id='.$row['product_id'].'" class="list-group-item">'.$row['product_name'].'</a>';
+		}
+	?>
+</div>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- <script type="text/javascript" src="js/jquery-ui.min.js"></script> -->

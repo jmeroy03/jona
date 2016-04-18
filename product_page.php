@@ -44,7 +44,7 @@ error_reporting(E_ALL);
 
 
 <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation" class="active"><a href="#">Review</a></li>
 </ul>
 
 <table>
