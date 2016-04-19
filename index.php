@@ -1,7 +1,8 @@
 <?php
-ini_set("display_errors", "1");
-error_reporting(E_ALL);
-	
+	ini_set("display_errors", "1");
+	error_reporting(E_ALL);
+	session_start();
+
 	require 'controllers/customers.php';
 	require 'classes/product.php';
 	require 'classes/logins.php';
@@ -16,7 +17,6 @@ error_reporting(E_ALL);
 </head>
 <body> -->
 <?php
-    session_start();
 	$products = new Product();
 	$customers = new Customers();
 	$products_list = $products->getProducts();
@@ -46,11 +46,11 @@ error_reporting(E_ALL);
 			<input class='form-control btn btn-success' type="submit" value="Log-in" name="logIn">
 	   </form>
       </div>
-      
+
     </div>
   </div>
 </div> -->
-<?php 
+<?php
 	include 'login_modal.php';
 ?>
 <!--End of Modal-->

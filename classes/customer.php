@@ -1,8 +1,8 @@
 <?php
 
 	//var_dump($database_conn);
-// require_once "{$_SERVER['HTTP_HOST']}/jona/DBConnect/pdo.php";
-require_once "../jona/DBConnect/pdo.php";
+//require_once "{$_SERVER['HTTP_HOST']}/jona/DBConnect/pdo.php";
+require_once 'DBConnect/pdo.php';
 
 
 class Customer{
@@ -15,7 +15,7 @@ class Customer{
 	}
 
 	public function list_customer($account,$password){
-		$select = " SELECT * 
+		$select = " SELECT *
 					FROM customers WHERE email='$account' AND password='$password'";
 
 		$query = $this->conn->query($select);//word query() is defined
@@ -28,19 +28,16 @@ class Customer{
 			$_SESSION['phone']=$row['phone'];
 			echo $row['first_name'].' '.$row['last_name'] .$row['phone'].'<br>';
 			//header("Location: index.php");
-		}	
+		}
 	}
 
 	public function getCustomer($account, $password){
-		$select = "SELECT * 
+		$select = "SELECT *
 					FROM customers WHERE email='$account' AND password='$password'";
 
 		$query = $this->conn->query($select);//word query() is defined
 		$customer = $query->fetch(PDO::FETCH_ASSOC);//fetch single row
 		return $customer;
 	}
-
-
 } //class
 ?>
-

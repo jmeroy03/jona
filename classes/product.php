@@ -1,5 +1,5 @@
 <?php
-require_once '../jona/DbConnect/pdo.php';
+require_once 'DBConnect/pdo.php';
 
 class Product{
 	private $conn;
@@ -10,7 +10,7 @@ class Product{
 	}
 
 	public function getProducts(){
-		$select = " SELECT * 
+		$select = " SELECT *
 					FROM products";
 
 		$query = $this->conn->query($select);//word query() is defined

@@ -1,24 +1,24 @@
 <?php
-ini_set("display_errors", "1");
-error_reporting(E_ALL);
+	ini_set("display_errors", "1");
+	error_reporting(E_ALL);
+  session_start();
 
 	require 'controllers/customers.php';
 	require 'classes/product.php';
-	require 'classes/logins.php';
 	require 'classes/review.php';
 ?>
 
 <?php
 	$reviews = new Review();
 	$reviews_list = $reviews->listReview();
-?>	
+?>
 
 <?php
 	include 'header.php';
 ?>
 
 <?php if (isset($_GET['r']) && $_GET['r'] == 'error'){ ?>
-	<div class="alert alert-danger"> Invalod User </div>
+	<div class="alert alert-danger"> Invalid User </div>
 <?php } ?>
 
 <br/>
@@ -47,7 +47,7 @@ error_reporting(E_ALL);
 			<input class='form-control btn btn-success' type="submit" value="Log-in" name="logIn">
 	   </form>
       </div>
-      
+
     </div>
   </div>
 </div>
